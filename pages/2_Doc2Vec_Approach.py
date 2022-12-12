@@ -7,7 +7,7 @@ import re
 import string
 import spacy
 import time
-import spacy_streamlit
+# import spacy_streamlit
 
 st.set_page_config(page_title="Doc2Vec Classifier", page_icon="📜")
 
