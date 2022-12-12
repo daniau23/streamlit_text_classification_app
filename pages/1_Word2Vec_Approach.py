@@ -7,6 +7,7 @@ import re
 import string
 import spacy
 import time
+import spacy_streamlit
 
 st.set_page_config(page_title="Word2Vec Classifier", page_icon="🔤")
 
@@ -87,7 +88,13 @@ all_stopwords = {"'d","'ll","'m","'re","'s","'ve",'a','about',
 
 my_stop_words = set(all_stopwords) # My own stop words
 
-nlp = spacy.load("en_core_web_sm")
+SPACY_MODEL_NAMES = "en_core_web_sm"
+# nlp = spacy.load("en_core_web_sm")
+@st.cache(allow_output_mutation=True,persist=True,show_spinner=False)
+def load_spacy_model(name):
+    return spacy_streamlit.load(name)
+
+nlp = load_spacy_model(SPACY_MODEL_NAMES)
 
 @st.cache(persist=True,show_spinner=False,suppress_st_warning=True,hash_funcs={"preshed.maps.PreshMap": hash,
 "cymem.cymem.Pool": hash,"thinc.model.Model": hash,"spacy.pipeline.tok2vec.Tok2VecListener": hash})
