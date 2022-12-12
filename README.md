@@ -12,6 +12,7 @@
     - scipy==1.9.0
     - matplotlib==3.5.3
     - gensim==4.2.0
+    - python==3.8.13
 
 - Please for further understanding on Word2Vec and Doc2Vec kindly read;
 **Practical Natural Language Processing A Comprehensive Guide to Building Real-World NLP Systems** by *(Sowmya Vajjala, Bodhisattwa Majumder, Anuj Gupta, and Harshit Surana)* Pages 92-106.
