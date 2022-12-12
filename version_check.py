@@ -7,6 +7,7 @@ import spacy
 import scipy
 import matplotlib
 import gensim
+import seaborn
 
 print(f"xgboost=={xgb.__version__}")
 print(f"scikit-learn=={sklearn.__version__}")
@@ -17,3 +18,4 @@ print(f"numpy=={np.__version__}")
 print(f"scipy=={scipy.__version__}")
 print(f"matplotlib=={matplotlib.__version__}")
 print(f"gensim=={gensim.__version__}")
+print(f"seaborn=={seaborn.__version__}")

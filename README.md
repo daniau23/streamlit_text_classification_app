@@ -12,7 +12,8 @@
     - scipy==1.9.0
     - matplotlib==3.5.3
     - gensim==4.2.0
-    - python==3.8.13
+    - python==3.8/3.8.13/3.9 (kindly use 3.9 for deployment as that's what works on Streamlit)
+    - seaborn==0.11.2
 
 - Please for further understanding on Word2Vec and Doc2Vec kindly read;
 **Practical Natural Language Processing A Comprehensive Guide to Building Real-World NLP Systems** by *(Sowmya Vajjala, Bodhisattwa Majumder, Anuj Gupta, and Harshit Surana)* Pages 92-106.
