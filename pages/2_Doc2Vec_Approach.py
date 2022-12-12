@@ -89,9 +89,10 @@ my_stop_words = set(all_stopwords) # My own stop words
 
 SPACY_MODEL_NAMES = "en_core_web_sm"
 # nlp = spacy.load("en_core_web_sm")
+
 @st.cache(allow_output_mutation=True,persist=True,show_spinner=False)
 def load_spacy_model(name):
-    return spacy_streamlit.load(name)
+    return spacy.load(name)
 
 nlp = load_spacy_model(SPACY_MODEL_NAMES)
 
