@@ -158,8 +158,8 @@ if txt:
     st.snow()
     time.sleep(0.01)
     if y_pred == 1:
-        st.success("Positive sentiment")
+        st.success(f"Positive sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")
     elif y_pred == 0:
-        st.warning("Neutral sentiment")
-    if y_pred == -1:
-        st.error("Negative sentiment")
+        st.warning(f"Neutral sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")
+    elif y_pred == -1:
+        st.error(f"Negative sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")

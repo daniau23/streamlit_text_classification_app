@@ -161,8 +161,17 @@ if txt:
     st.snow()
     time.sleep(0.01)
     if y_pred == 1:
-        st.success("Positive sentiment")
+        st.success(f"Positive sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")
     elif y_pred == 0:
-        st.warning("Neutral sentiment")
-    if y_pred == -1:
-        st.error("Negative sentiment")
+        st.warning(f"Neutral sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")
+    elif y_pred == -1:
+        st.error(f"Negative sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")
+
+
+
+# Different output configurations
+# st.warning(f"Neutral sentiment, probability {model.predict_proba(X_reshaped)}") # Neutral sentiment, probability [[0. 0.66683683 0.33316317]]
+# st.warning(f"Neutral sentiment, probability {np.argmax(model.predict_proba(X_reshaped),axis=1)}") # Neutral sentiment, probability [1]
+# st.warning(f"Neutral sentiment, probability {np.argmax(model.predict_proba(X_reshaped))}") # Neutral sentiment, probability 1
+# st.warning(f"Neutral sentiment, probability {np.max(model.predict_proba(X_reshaped), axis=1)}") # Neutral sentiment, probability [0.66683683] 
+# st.warning(f"Neutral sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}") # Neutral sentiment, probability 0.6668 
