@@ -155,7 +155,8 @@ if txt:
 
     time.sleep(0.01)
     st.markdown("**Done predicting**")
-    st.snow()
+    # st.snow()
+    st.balloons()
     time.sleep(0.01)
     if y_pred == 1:
         st.success(f"Positive sentiment, probability: {round(np.max(model.predict_proba(X_reshaped)),4)}")

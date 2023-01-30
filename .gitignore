@@ -4,3 +4,4 @@ hgb_200.pkl
 glove_twitter_200.pkl
 xgb_200.pkl
 version_check.py
+models/deeplearning/BiGRU/saved_model/tensorflow_lite
